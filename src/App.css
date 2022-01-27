@@ -28,6 +28,35 @@
   color: #61dafb;
 }
 
+.container {
+  display: flex;
+}
+
+.countryInfo {
+  position: fixed;
+  left: 50%;
+  top: 5rem;
+  border: 2px solid black;
+  padding: 1rem;
+  box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+}
+
+.card {
+  padding: 2rem;
+  margin: 0.5rem;
+  width: 400px;
+  box-shadow: 0px 0px 10px 4px rgba(119, 119, 119, 0.75);
+}
+
+.card h4 {
+  color: #282c34;
+  text-decoration: none;
+}
+
+.card img {
+  width: 180px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
