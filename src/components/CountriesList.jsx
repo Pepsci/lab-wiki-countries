@@ -17,8 +17,8 @@ const CountriesList = ({ countries }) => {
                   src={`https://flagpedia.net/data/flags/icon/72x54/${countrie.alpha2Code.toLowerCase()}.png`}
                   alt={countrie.name.common}
                 />
-                <div class="card-body">
-                  <h4 class="card-title">{countrie.name.common}</h4>
+                <div className="countrieName">
+                  <h4>{countrie.name.common}</h4>
                 </div>
               </div>
             </Link>

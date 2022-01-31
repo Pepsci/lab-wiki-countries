@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 const CountryDetails = (props) => {
@@ -9,8 +9,15 @@ const CountryDetails = (props) => {
     (count) => count.alpha3Code === params.name
   );
 
-  console.log(params);
+  const myBorder = myCountrie.borders.map((countryCode) => {
+    const foundCountry = props.countries.find(
+      (count) => count.alpha3Code === countryCode
+    );
+    return foundCountry.name.common;
+  });
+
   console.log(myCountrie);
+  console.log(myBorder);
 
   return (
     <div>
@@ -21,6 +28,16 @@ const CountryDetails = (props) => {
       <h1>{myCountrie.name.common}</h1>
       <p>Capital : {myCountrie.capital}</p>
       <p>Area : {myCountrie.area} km²</p>
+      <p>Border </p>
+      <ul>
+        {myBorder.map((c, i) => {
+          return (
+            <li key={c}>
+              <Link to={`/${myCountrie.borders[i]}`}>{c}</Link>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

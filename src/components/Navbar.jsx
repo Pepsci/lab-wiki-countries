@@ -3,8 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav>
-      <NavLink to="/">LAB - WikiCountries.</NavLink>
+    <nav className="nav-bar navbar-expand-lg navbar-light bg-light">
+      <NavLink className="navbar-brand" to="/">
+        LAB - WikiCountries.
+      </NavLink>
     </nav>
   );
 };
